@@ -1,0 +1,13 @@
+{
+    "id":  "user-1",
+    "fullName":  "Sinh viên mẫu",
+    "userCode":  "SYN001",
+    "username":  "synthetic",
+    "email":  null,
+    "mustChangePassword":  true,
+    "roles":  [
+                  {
+                      "roleName":  "STUDENT"
+                  }
+              ]
+}

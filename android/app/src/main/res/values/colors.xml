@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mirrors AppColors.loginGradientEdge / loginGradientCenter in lib/common/theme/app_colors.dart. -->
+    <color name="splash_gradient_edge">#FF0A17A6</color>
+    <color name="splash_gradient_center">#FF1D44F0</color>
+</resources>

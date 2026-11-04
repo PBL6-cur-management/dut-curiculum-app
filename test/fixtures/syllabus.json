@@ -1,0 +1,40 @@
+{
+    "references":  null,
+    "weeks":  [
+                  {
+                      "content":  "\u003cp\u003eNội dung mẫu\u003c/p\u003e",
+                      "weekLabel":  "1"
+                  }
+              ],
+    "attachments":  [
+                        {
+                            "fileName":  "synthetic.pdf",
+                            "materialKind":  "SIGNED_SYLLABUS",
+                            "id":  "attachment-1",
+                            "sizeBytes":  1024
+                        }
+                    ],
+    "publishedAt":  "2026-08-01T00:00:00.000Z",
+    "credits":  "3.00",
+    "courseDescription":  "\u003cp\u003eMô tả mẫu\u003c/p\u003e",
+    "clos":  [
+                 {
+                     "cloCode":  "CLO1",
+                     "description":  "Mục tiêu mẫu"
+                 }
+             ],
+    "teachingMethods":  null,
+    "revisionNumber":  1,
+    "courseName":  "Học phần mẫu",
+    "assessments":  [
+                        {
+                            "weight":  "100.00",
+                            "componentCode":  "FINAL",
+                            "componentName":  "Cuối kỳ",
+                            "assessmentForm":  null
+                        }
+                    ],
+    "assessmentMethods":  null,
+    "courseCode":  "SYN101",
+    "objectives":  null
+}

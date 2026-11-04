@@ -1,0 +1,26 @@
+{
+    "total":  1,
+    "pageSize":  50,
+    "page":  1,
+    "items":  [
+                  {
+                      "id":  "result-1",
+                      "score10":  "7.50",
+                      "score4":  "3.00",
+                      "letterGrade":  "B",
+                      "course":  {
+                                     "courseName":  "Học phần mẫu",
+                                     "courseCode":  "SYN101",
+                                     "id":  "course-1"
+                                 },
+                      "semester":  {
+                                       "termInYear":  1,
+                                       "startDate":  "2026-08-01",
+                                       "semesterCode":  "2026-1",
+                                       "id":  "semester-1",
+                                       "academicYear":  "2026-2027"
+                                   },
+                      "status":  "PASSED"
+                  }
+              ]
+}

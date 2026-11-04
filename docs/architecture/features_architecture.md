@@ -1,0 +1,24 @@
+# Feature Architecture
+
+## Authentication
+SessionCubit is app-scoped. Login and change-password cubits are route/sheet-scoped factories. Use cases depend on AuthRepository; the data implementation maps JSON and clears local cookies after logout, including failure paths. The router gates unknown, unauthenticated, and forced-password states.
+
+## Shell
+Home and profile use an indexed shell to preserve tab state. Pure components receive data/callbacks only. The logged-in user's initials replace photos. All non-curriculum tiles and notifications share a placeholder.
+
+## Curriculum
+The portal shell owns one PortalContextCubit across the academic launcher and six detail routes. It loads dated semester options (including known future dates) and student/program context together. Changing semester refetches overview and resets the selected program to the first returned program; request revisions suppress obsolete responses. One shared summary displays program, semester and read-only applied version/noVersion. Its sheet owns program/semester choices and decision metadata. Loading, error, missing student, missing dated/selected semester and unresolved applicability gate academic answers in that order. All six detail providers retain complete-context ValueKeys, including item identity for syllabus; changing syllabus context leaves the old item before selection.
+
+PortalTheme and portal-local cards, badges, section headers, disclosures, filled tabs and state panels isolate the redesign from Auth/Shell/global theme. AppColors/AppDimens additions are append-only. Academic pages omit student identity and duplicate program summaries. The launcher links five jobs rather than repeating academic data.
+
+Curriculum retains local filtering, unfiltered compulsory term credits and current/next expansion. Named elective groups preserve first-seen order; null/blank groups remain separate elective course rows with no invented group requirement. Details show supplied score scales without substituting zero. Optional equivalent-source evidence is fetched only on demand from existing eligibility reasons, joined by itemId only for authoritative equivalent passes, cached, independently retriable and invalidated by reload/close. Available syllabus actions remain independent of result details.
+
+Syllabus prioritizes vertical assessment cards and the existing-data limitation. Assessment methods, description, CLOs, weeks and documents are collapsed disclosures; objectives, teaching methods, references, timestamps and byte sizes are not rendered. Existing authenticated download/cache/viewer behavior remains. PLOs use independent two-line previews and expansion keyed by complete context, group, code and index.
+
+Progress keeps existing independent audit/history reads and local Progress/Results selection without refetching. A finished pane remains usable while the other read is loading or failed. Server recognized/required/missing credit strings supply the KPI; only the displayed ratio is capped, with zero denominator N/A. Optional breakdown distinguishes null/zero group targets and shows named knowledge blocks descriptively. Result-ID keys preserve repeat attempts, main grades retain explicit scales, details expose alternate scales, and paging errors keep loaded rows.
+
+Registration is advice-only: completed items are hidden, strict eligible/conditional and blocked partitions have counted local tabs, and unfinished null verdicts appear separately in a neutral section. Concurrent course names, catalog restrictions and material warnings remain visible, with full conditions on demand. Graduation preserves the authoritative reviewed/diagnostic/unsupported outcomes; reviewed pages lead with conclusion and limitation, categorized exact shortfalls and compact server totals only for total-credit shortfalls. Basis is collapsed and accounting links to ordinary Progress. Empty shortfalls never imply approval.
+
+PortalApi validates reviewed graduation response student/program/semester IDs against the request before returning data to Progress or Graduation; mismatch errors use a safe marker rather than received identifiers. Diagnostic and future-schema gates remain unchanged. The only DTO/domain extension is optional equivalent-course evidence from existing reason fields; no endpoint, dependency or backend field was added.
+
+Pure components receive data/callbacks; domain labels remain in portal_labels.dart. Contract, enrichment/state, seven screen, shared component/context and real-router lifecycle/isolation tests are authored under test/features/portal; test/support/portal_widget_harness.dart provides typed mocks and localized narrow/large-text support. Generation, analyzer, Flutter test suites and device validation are explicitly deferred to the caller by the execution fence, not recorded passes. See the implementation plan's Execution Status and Deviations; owner visual approval pending.

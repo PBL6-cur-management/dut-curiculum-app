@@ -1,0 +1,29 @@
+{
+    "programName":  "Chương trình mẫu",
+    "totalCredits":  "120.00",
+    "versionNumber":  "1.0",
+    "terms":  [
+                  {
+                      "plannedSemester":  1,
+                      "credits":  "3.00",
+                      "courses":  [
+                                      {
+                                          "isElective":  false,
+                                          "attemptCount":  2,
+                                          "blockSymbol":  "CS",
+                                          "state":  "IN_PROGRESS",
+                                          "hasSyllabus":  true,
+                                          "credits":  "3.00",
+                                          "groupName":  null,
+                                          "itemId":  "item-1",
+                                          "score10":  "7.50",
+                                          "courseName":  "Học phần mẫu",
+                                          "courseCode":  "SYN101",
+                                          "score4":  "3.00",
+                                          "letterGrade":  "B"
+                                      }
+                                  ]
+                  }
+              ],
+    "decisionNumber":  null
+}

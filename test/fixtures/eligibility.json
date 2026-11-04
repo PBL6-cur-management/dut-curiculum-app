@@ -1,0 +1,43 @@
+{
+    "evaluatedAt":  "2026-08-01T00:00:00.000Z",
+    "warnings":  [
+                     {
+                         "course":  {
+                                        "courseName":  "Học phần mẫu",
+                                        "courseCode":  "SYN101",
+                                        "id":  "course-1"
+                                    },
+                         "code":  "COURSE_NOT_ACTIVE",
+                         "message":  "Lưu ý mẫu"
+                     }
+                 ],
+    "items":  [
+                  {
+                      "course":  {
+                                     "courseName":  "Học phần mẫu",
+                                     "courseCode":  "SYN101",
+                                     "id":  "course-1"
+                                 },
+                      "eligibility":  "CONDITIONAL",
+                      "itemId":  "item-1",
+                      "credits":  "3.00",
+                      "catalogStatus":  "ACTIVE",
+                      "completed":  false,
+                      "statusText":  "Phải học cùng",
+                      "plannedSemester":  1,
+                      "requiredConcurrentCourses":  [
+                                                        {
+                                                            "courseName":  "Học phần mẫu",
+                                                            "courseCode":  "SYN101",
+                                                            "id":  "course-1"
+                                                        }
+                                                    ],
+                      "reasons":  [
+                                      {
+                                          "message":  "Học cùng học phần mẫu"
+                                      }
+                                  ]
+                  }
+              ],
+    "contractVersion":  1
+}

@@ -1,0 +1,60 @@
+{
+    "status":  "REVIEWED",
+    "error":  null,
+    "result":  {
+                   "knowledgeBlocks":  [
+                                           {
+                                               "compulsoryCredits":  "3.00",
+                                               "blockSymbol":  null,
+                                               "advisoryGap":  null,
+                                               "electiveCredits":  "0.00",
+                                               "earnedCredits":  "3.00",
+                                               "blockName":  null,
+                                               "catalogRequiredCredits":  null
+                                           }
+                                       ],
+                   "context":  {
+                                   "programName":  "Chương trình mẫu",
+                                   "cohortCode":  "SYN26",
+                                   "versionNumber":  "1.0",
+                                   "semesterCode":  "2026-1",
+                                   "programCode":  "SYN"
+                               },
+                   "warnings":  [
+                                    {
+                                        "code":  "EQUIVALENT_CREDIT_GAP",
+                                        "message":  "Lưu ý mẫu"
+                                    }
+                                ],
+                   "shortfalls":  [
+                                      {
+                                          "message":  "Thiếu 117 tín chỉ",
+                                          "code":  "TOTAL_CREDITS_MISSING",
+                                          "category":  "TOTAL_CREDITS"
+                                      }
+                                  ],
+                   "credits":  {
+                                   "elective":  "0.00",
+                                   "compulsory":  "3.00",
+                                   "requiredTotal":  "120.00",
+                                   "free":  "0.00",
+                                   "missingTotal":  "117.00",
+                                   "recognizedTotal":  "3.00"
+                               },
+                   "conclusion":  "NOT_ELIGIBLE",
+                   "electiveGroups":  [
+                                          {
+                                              "earnedCourses":  0,
+                                              "requiredCourses":  null,
+                                              "missingCourses":  null,
+                                              "groupName":  "Nhóm mẫu",
+                                              "missingCredits":  null,
+                                              "earnedCredits":  "0.00",
+                                              "requiredCredits":  null,
+                                              "groupCode":  "SYN-G"
+                                          }
+                                      ],
+                   "evaluatedAt":  "2026-08-01T00:00:00.000Z",
+                   "schemaVersion":  1
+               }
+}
